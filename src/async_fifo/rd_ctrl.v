@@ -43,7 +43,7 @@ module rd_ctrl #(
   reg               r_empty;
   
   // Read Controls Asynch Logic
-  wire w_empty = ($unsigned(r_rd_ptr) == $unsigned(i_wr_ptr)) ? 1'b1 : 1'b0;
+  wire w_empty = ($signed(r_rd_ptr) == $signed(i_wr_ptr)) ? 1'b1 : 1'b0;
   
   ///////////////////////////////////////////////////////////////////////////////
   //            ********      Architecture Declaration      ********           //

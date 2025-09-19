@@ -44,7 +44,7 @@ module wr_ctrl #(
 
   // Write Controls Asynch Logic
   //wire w_full = ($signed(r_wr_ptr) == $signed(i_rd_ptr)-1) ? 1'b1 : 1'b0;
-  wire w_full = ($unsigned(r_wr_ptr)+1 == $unsigned(i_rd_ptr)) ? 1'b1 : 1'b0;
+  wire w_full = ($signed(r_wr_ptr)+1 == $signed(i_rd_ptr)) ? 1'b1 : 1'b0;
 
 
   ///////////////////////////////////////////////////////////////////////////////
